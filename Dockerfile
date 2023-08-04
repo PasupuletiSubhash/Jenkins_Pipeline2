@@ -16,6 +16,7 @@ RUN apt update -y \
     && sed -i 's/username_here/admin/g' /var/www/html/wp-config.php \
     && sed -i 's/password_here/Qwert123/g' /var/www/html/wp-config.php \
     && sed -i 's/localhost/database-1.cp35ofbjjbaa.us-east-1.rds.amazonaws.com/g' /var/www/html/wp-config.php
+RUN a2ensite mrsubbu
 
 COPY mrsubbu.live.zip mrsubbu.live.zip
 COPY mrsubbu.conf /etc/apache2/sites-available/
