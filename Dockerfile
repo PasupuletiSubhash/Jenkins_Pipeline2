@@ -5,8 +5,8 @@ RUN apt update -y \
     && apt install wget mariadb-server tzdata -y \
     && apt install unzip php apache2 php-mysqlnd -y \
     && apt install openssl -y \
-    && mkdir -p /etc/apache2/apache2.conf/sslcert \
-    && unzip mrsubbu.live.zip -d /etc/apache2/apache2.conf/sslcert \
+    && mkdir -p /etc/apache2/sslcert \
+    && unzip mrsubbu.live.zip -d /etc/apache2/sslcert \
     && wget https://wordpress.org/latest.zip \
     && rm -rf /var/www/html/* \
     && unzip latest.zip -d /var/www/html/ \
